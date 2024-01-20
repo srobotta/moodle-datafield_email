@@ -1,4 +1,4 @@
-# Email Database Field
+# Database Field Email
 
 This plugin provides a new field type email for the database activity.
 The field is very similar to the URL field type, only that it accepts
