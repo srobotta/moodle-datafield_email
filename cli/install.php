@@ -22,7 +22,11 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-define('CLI_SCRIPT', true);
+// Run in cli mode only.
+if (!php_sapi_name() == "cli") {
+    echo "Script must be executed in CLI mode\n";
+    exit(1);
+}
 
 $target = implode(DIRECTORY_SEPARATOR, [dirname(__FILE__), '..', 'pix', 'email.svg']);
 $link = implode(DIRECTORY_SEPARATOR, [dirname(__FILE__), '..', '..', '..', 'pix', 'field', 'email.svg']);
