@@ -27,8 +27,6 @@ use core_privacy\local\request\transform;
 use core_privacy\local\request\writer;
 use mod_data\privacy\datafield_provider;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for datafield_email implementing null_provider.
  *

@@ -1,26 +1,18 @@
 <?php
-///////////////////////////////////////////////////////////////////////////
-//                                                                       //
-// NOTICE OF COPYRIGHT                                                   //
-//                                                                       //
-// Moodle - Modular Object-Oriented Dynamic Learning Environment         //
-//          http://moodle.org                                            //
-//                                                                       //
-// Copyright (C) 1999-onwards Moodle Pty Ltd  http://moodle.com          //
-//                                                                       //
-// This program is free software; you can redistribute it and/or modify  //
-// it under the terms of the GNU General Public License as published by  //
-// the Free Software Foundation; either version 2 of the License, or     //
-// (at your option) any later version.                                   //
-//                                                                       //
-// This program is distributed in the hope that it will be useful,       //
-// but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
-// GNU General Public License for more details:                          //
-//                                                                       //
-//          http://www.gnu.org/copyleft/gpl.html                         //
-//                                                                       //
-///////////////////////////////////////////////////////////////////////////
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * The class for a database activity field type email.
@@ -122,14 +114,14 @@ class data_field_email extends data_field_base {
     public function generate_sql($tablealias, $value) {
         global $DB;
 
-        static $i=0;
+        static $i = 0;
         $i++;
         $name = "df_email_$i";
         return [
             " ({$tablealias}.fieldid = {$this->field->id} AND "
                 . $DB->sql_like("{$tablealias}.content", ":$name", false)
-            .") ",
-            [$name => "%$value%"]
+            . ') ',
+            [$name => "%$value%"],
         ];
     }
 
@@ -141,7 +133,7 @@ class data_field_email extends data_field_base {
      * @param $template
      * @return string
      */
-    function display_browse_field($recordid, $template) {
+    public function display_browse_field($recordid, $template) {
         $content = $this->get_data_content($recordid);
         if (!$content || !$content->content) {
             return '';
@@ -183,7 +175,7 @@ class data_field_email extends data_field_base {
      * @return bool
      * @throws coding_exception
      */
-    function update_content($recordid, $value, $name='') {
+    public function update_content($recordid, $value, $name='') {
         return parent::update_content($recordid, clean_param($value, PARAM_EMAIL), $name);
     }
 

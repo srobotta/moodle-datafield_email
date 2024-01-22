@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -22,14 +21,13 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// Run in cli mode only.
-if (!php_sapi_name() == "cli") {
-    echo "Script must be executed in CLI mode\n";
-    exit(1);
-}
+// Run in cli mode only (however to make the codechecker happy, include the config.php).
+define('CLI_SCRIPT', true);
+require_once(implode(DIRECTORY_SEPARATOR,
+    array_merge([__DIR__], array_fill(1, 5, '..'), ['config.php'])));
 
-$target = implode(DIRECTORY_SEPARATOR, [dirname(__FILE__), '..', 'pix', 'email.svg']);
-$link = implode(DIRECTORY_SEPARATOR, [dirname(__FILE__), '..', '..', '..', 'pix', 'field', 'email.svg']);
+$target = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', 'pix', 'email.svg']);
+$link = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', '..', 'pix', 'field', 'email.svg']);
 
 echo 'Create symlink for email icon... ';
 if (!symlink($target, $link)) {
@@ -42,3 +40,4 @@ if (!symlink($target, $link)) {
 } else {
     echo 'ok' . PHP_EOL;
 }
+

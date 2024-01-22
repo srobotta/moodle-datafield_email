@@ -24,7 +24,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2024012000;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2022112808;        // Requires this Moodle version (4.1)
-$plugin->component = 'datafield_email'; // Full name of the plugin (used for diagnostics)
-$plugin->release   = '1.0';             // Readable version of this plugin
-$plugin->maturity  = MATURITY_STABLE;   // Maturity of this plugin
+$plugin->requires  = 2022112808;        // Requires this Moodle version (4.1).
+$plugin->component = 'datafield_email'; // Full name of the plugin (used for diagnostics).
+$plugin->release   = '1.0';             // Readable version of this plugin.
+$plugin->maturity  = MATURITY_STABLE;   // Maturity of this plugin.
