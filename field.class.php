@@ -17,8 +17,7 @@
 /**
  * The class for a database activity field type email.
  *
- * @package    datafield
- * @subpackage email
+ * @package    datafield_email
  * @copyright  2024 Stephan Robotta <stephan.robotta@bfh.ch>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -81,7 +80,7 @@ class data_field_email extends data_field_base {
 
     /**
      * The input field that is displayed in the advanced search.
-     * @param $value
+     * @param string $value
      * @return string
      * @throws coding_exception
      */
@@ -93,7 +92,7 @@ class data_field_email extends data_field_base {
 
     /**
      * Te search field parameter value, derived from the request.
-     * @param $defaults
+     * @param array|null $defaults
      * @return mixed
      * @throws coding_exception
      */
@@ -107,8 +106,8 @@ class data_field_email extends data_field_base {
 
     /**
      * Return the partial search sql when in advanced search the email field is filled with a search term.
-     * @param $tablealias
-     * @param $value
+     * @param string $tablealias
+     * @param string $value
      * @return array
      */
     public function generate_sql($tablealias, $value) {
@@ -129,8 +128,8 @@ class data_field_email extends data_field_base {
      * This function returns the field value when the field name is used as a placeholder in the template.
      * Depending on the field setting, the email is returned as it is or a mailto link is returned.
      *
-     * @param $recordid
-     * @param $template
+     * @param int $recordid
+     * @param object $template
      * @return string
      */
     public function display_browse_field($recordid, $template) {
@@ -153,7 +152,7 @@ class data_field_email extends data_field_base {
 
     /**
      * Validate the submitted email address, in case the field was filled with something.
-     * @param $value
+     * @param array $value
      * @return lang_string|string
      * @throws coding_exception
      */
@@ -169,9 +168,9 @@ class data_field_email extends data_field_base {
 
     /**
      * Just make sure that the submitted value is an email address.
-     * @param $recordid
-     * @param $value
-     * @param $name
+     * @param int $recordid
+     * @param string $value
+     * @param string $name
      * @return bool
      * @throws coding_exception
      */

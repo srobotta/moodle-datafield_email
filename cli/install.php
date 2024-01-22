@@ -15,14 +15,18 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    datafield
- * @subpackage email
+ * Post install (copy icon to the correct location) after the plugin code has been installed.
+ *
+ * @package    datafield_email
  * @copyright  2024 Stephan Robotta <stephan.robotta@bfh.ch>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 // Run in cli mode only (however to make the codechecker happy, include the config.php).
 define('CLI_SCRIPT', true);
+require_once(__DIR__ . '/../../../../../config.php');
+
+// The codechecker doesn't like this construct.
 require_once(implode(DIRECTORY_SEPARATOR,
     array_merge([__DIR__], array_fill(1, 5, '..'), ['config.php'])));
 

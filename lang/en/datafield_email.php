@@ -17,8 +17,7 @@
 /**
  * Strings for component 'datafield_email', language 'en', branch 'master'
  *
- * @package    datafield
- * @subpackage url
+ * @package    datafield_email
  * @copyright  2024 Stephan Robotta <stephan.robotta@bfh.ch>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

@@ -15,8 +15,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    datafield
- * @subpackage email
+ * Plugin for datatype email.
+ * @package    datafield_email
  * @copyright  2024 Stephan Robotta (stephan.robotta@bfh.ch)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
