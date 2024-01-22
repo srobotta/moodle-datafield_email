@@ -148,7 +148,7 @@ class data_field_email extends data_field_base {
         }
         // If param1 is set, then we need to create a mailto link.
         $attributes = ['class' => 'data-field-link'];
-        return html_writer::link("mailto:' . {$email}", $email, $attributes);
+        return html_writer::link("mailto:{$email}", $email, $attributes);
     }
 
     /**
