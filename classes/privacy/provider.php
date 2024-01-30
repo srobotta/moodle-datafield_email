@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * Privacy Subsystem implementation for datafield_url.
+ * Privacy Subsystem implementation for datafield_email.
  *
  * @package    datafield_email
  * @copyright  2024 Stephan Robotta <stephan.robotta@bfh.ch>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace datafield_url\privacy;
+namespace datafield_email\privacy;
 
 use core_privacy\local\metadata\null_provider;
 use core_privacy\local\request\transform;
