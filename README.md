@@ -41,6 +41,7 @@ the plain email value is printed without any modification.
 ### 1.2
 
 - Fix namespace in privacy provider class.
+- Fix value in language tag.
 
 ### 1.1
 

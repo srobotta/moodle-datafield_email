@@ -25,4 +25,4 @@
 $string['pluginname'] = 'Email';
 $string['mailtolink'] = 'Create mailto link';
 $string['fieldtypelabel'] = 'Email';
-$string['privacy:metadata'] = 'The URL field component doesn\'t store any personal data; it uses tables defined in mod_data.';
+$string['privacy:metadata'] = 'The Email field component doesn\'t store any personal data; it uses tables defined in mod_data.';
