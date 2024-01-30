@@ -1,6 +1,6 @@
 # Database Field Email
 
-![Release](https://img.shields.io/badge/Release-1.1-blue.svg)
+![Release](https://img.shields.io/badge/Release-1.2-blue.svg)
 [![Moodle Plugin
 CI](https://github.com/srobotta/moodle-datafield_email/workflows/Moodle%20Plugin%20CI/badge.svg?branch=master)](https://github.com/srobotta/moodle-datafield_email/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amaster)
 ![Supported](https://img.shields.io/badge/Moodle-4.1+-orange.svg)
@@ -37,6 +37,10 @@ link in the view templates. If the checkbox is not checked, then
 the plain email value is printed without any modification.
 
 ## Version History
+
+### 1.2
+
+- Fix namespace in privacy provider class.
 
 ### 1.1
 
