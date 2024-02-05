@@ -2,7 +2,7 @@
 
 ![Release](https://img.shields.io/badge/Release-1.2-blue.svg)
 [![Moodle Plugin
-CI](https://github.com/srobotta/moodle-datafield_email/workflows/Moodle%20Plugin%20CI/badge.svg?branch=master)](https://github.com/srobotta/moodle-datafield_email/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amaster)
+CI](https://github.com/srobotta/moodle-datafield_email/actions/workflows/moodle-plugin-ci.yml/badge.svg?branch=master)](https://github.com/srobotta/moodle-datafield_email/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amaster)
 ![Supported](https://img.shields.io/badge/Moodle-4.1+-orange.svg)
 [![License GPL-3.0](https://img.shields.io/github/license/srobotta/moodle-datafield_email?color=lightgrey)](https://github.com/srobotta/moodle-datafield_email/blob/master/LICENSE)
 
