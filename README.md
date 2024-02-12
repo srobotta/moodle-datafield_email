@@ -6,7 +6,7 @@ CI](https://github.com/srobotta/moodle-datafield_email/actions/workflows/moodle-
 ![Supported](https://img.shields.io/badge/Moodle-4.1+-orange.svg)
 [![License GPL-3.0](https://img.shields.io/github/license/srobotta/moodle-datafield_email?color=lightgrey)](https://github.com/srobotta/moodle-datafield_email/blob/master/LICENSE)
 
-This plugin provides a new field type email for the database activity.
+This plugin provides an additional field type email for the database activity.
 The field is very similar to the URL field type, only that it accepts
 syntactically correct email addresses as values.
 
@@ -27,7 +27,7 @@ email entry under the button "Create a field" will be missing.
 ## Usage
 
 Within your database activity in the *Fields* tab when creating a new
-field, the selection contains the new item "Email" with an envelope
+field, the selection contains the type "Email" with an envelope
 icon.
 
 Apart from the standard settings for a field, there is the additional
