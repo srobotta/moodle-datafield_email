@@ -51,13 +51,8 @@ class data_field_email extends data_field_base {
     public function image() {
         global $OUTPUT;
 
-        // When the cli/install.php was executed, the icon was linked/copied at this location.
-        $icon = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', 'pix', 'field', 'email.svg']);
-        if (file_exists($icon)) {
-            return $OUTPUT->pix_icon('field/email', 'email', 'data');
-        }
-        // Fallback that is used from the font awesome icons that exist in Moodle.
-        return $OUTPUT->pix_icon('i/email', 'email');
+        // Show the custom icon on a email field in the fields list.
+        return $OUTPUT->pix_icon('email', 'email', 'datafield_email');
     }
 
     /**
