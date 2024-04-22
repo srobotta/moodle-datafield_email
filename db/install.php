@@ -22,26 +22,27 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// Run in cli mode only (however to make the codechecker happy, include the config.php).
-define('CLI_SCRIPT', true);
+defined('MOODLE_INTERNAL') || die();
+
 require_once(__DIR__ . '/../../../../../config.php');
 
-// The codechecker doesn't like this construct.
-require_once(implode(DIRECTORY_SEPARATOR,
-    array_merge([__DIR__], array_fill(1, 5, '..'), ['config.php'])));
+/**
+ * Database email field install code
+ */
+function xmldb_datafield_email_install() {
 
-$target = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', 'pix', 'email.svg']);
-$link = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', '..', 'pix', 'field', 'email.svg']);
+    $target = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', 'pix', 'email.svg']);
+    $link = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', '..', 'pix', 'field', 'email.svg']);
 
-echo 'Create symlink for email icon... ';
-if (!symlink($target, $link)) {
-    echo 'failed' . PHP_EOL . 'Copy email icon... ';
-    if (!\copy($target, $link)) {
-        echo 'failed' . PHP_EOL . "Please copy {$target} to {$link}" . PHP_EOL;
+    echo 'Create symlink for email icon... ';
+    if (!symlink($target, $link)) {
+        echo 'failed' . PHP_EOL . 'Copy email icon... ';
+        if (!\copy($target, $link)) {
+            echo 'failed' . PHP_EOL . "Please copy {$target} to {$link}" . PHP_EOL;
+        } else {
+            echo 'ok' . PHP_EOL;
+        }
     } else {
         echo 'ok' . PHP_EOL;
     }
-} else {
-    echo 'ok' . PHP_EOL;
 }
-
