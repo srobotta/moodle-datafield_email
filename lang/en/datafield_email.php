@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Email';
-$string['mailtolink'] = 'Create mailto link';
 $string['fieldtypelabel'] = 'Email';
+$string['mailtolink'] = 'Create mailto link';
+$string['pluginname'] = 'Email';
 $string['privacy:metadata'] = 'The Email field component doesn\'t store any personal data; it uses tables defined in mod_data.';

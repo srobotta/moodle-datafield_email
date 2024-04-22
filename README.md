@@ -2,9 +2,10 @@
 
 ![Release](https://img.shields.io/badge/Release-1.2-blue.svg)
 [![Moodle Plugin
-CI](https://github.com/srobotta/moodle-datafield_email/actions/workflows/moodle-plugin-ci.yml/badge.svg?branch=master)](https://github.com/srobotta/moodle-datafield_email/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amaster)
-![Supported](https://img.shields.io/badge/Moodle-4.1+-orange.svg)
-[![License GPL-3.0](https://img.shields.io/github/license/srobotta/moodle-datafield_email?color=lightgrey)](https://github.com/srobotta/moodle-datafield_email/blob/master/LICENSE)
+CI](https://github.com/srobotta/moodle-datafield_email/actions/workflows/moodle-plugin-ci.yml/badge.svg?branch=main)](https://github.com/srobotta/moodle-datafield_email/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amain)
+[![PHP Support](https://img.shields.io/badge/php-7.4--8.3-blue)](https://github.com/srobotta/moodle-datafield_email/action)
+[![Moodle Support](https://img.shields.io/badge/Moodle-4.1--4.4+-orange)](https://github.com/srobotta/moodle-datafield_email/actions)
+[![License GPL-3.0](https://img.shields.io/github/license/srobotta/moodle-datafield_email?color=lightgrey)](https://github.com/srobotta/moodle-datafield_email/blob/main/LICENSE)
 
 This plugin provides an additional field type email for the database activity.
 The field is very similar to the URL field type, only that it accepts
@@ -18,10 +19,6 @@ Please run the following steps:
 1. Rename the newly created directory `moodle-datafield_email` into `email`
 so that the files from the repository are inside the directory hierarchy
 `<moodle_install_dir>/mod/data/field/email`.
-1. Run `php mod/data/field/email/cli/install.php` to symlink/copy
-the icon file from the plugin directory into the `mod/data/pix/field`
-directory. This step is optional, when not executed, the icon next to the
-email entry under the button "Create a field" will be missing.
 1. Finish the installation via the Moodle admin page.
 
 ## Usage
@@ -37,6 +34,11 @@ link in the view templates. If the checkbox is not checked, then
 the plain email value is printed without any modification.
 
 ## Version History
+
+### 1.3
+
+- Moved install script to the correct location db/install.php.
+- Support for Moodle 4.4 and PHP 8.3.
 
 ### 1.2
 
