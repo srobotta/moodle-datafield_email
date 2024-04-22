@@ -1,8 +1,7 @@
 # Database Field Email
 
 ![Release](https://img.shields.io/badge/Release-1.2-blue.svg)
-[![Moodle Plugin
-CI](https://github.com/srobotta/moodle-datafield_email/actions/workflows/moodle-plugin-ci.yml/badge.svg?branch=main)](https://github.com/srobotta/moodle-datafield_email/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amain)
+[![Moodle Plugin CI](https://github.com/srobotta/moodle-datafield_email/actions/workflows/moodle-plugin-ci.yml/badge.svg?branch=master)](https://github.com/srobotta/moodle-datafield_email/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amaster)
 [![PHP Support](https://img.shields.io/badge/php-7.4--8.3-blue)](https://github.com/srobotta/moodle-datafield_email/action)
 [![Moodle Support](https://img.shields.io/badge/Moodle-4.1--4.4+-orange)](https://github.com/srobotta/moodle-datafield_email/actions)
 [![License GPL-3.0](https://img.shields.io/github/license/srobotta/moodle-datafield_email?color=lightgrey)](https://github.com/srobotta/moodle-datafield_email/blob/main/LICENSE)
