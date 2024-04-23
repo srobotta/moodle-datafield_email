@@ -30,7 +30,6 @@ function xmldb_datafield_email_install() {
     $target = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', 'pix', 'email.svg']);
     $link = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', '..', 'pix', 'field', 'email.svg']);
 
-
     if (!file_exists($target)) {
         echo 'Create symlink for email icon... ';
         if (!symlink($target, $link)) {
