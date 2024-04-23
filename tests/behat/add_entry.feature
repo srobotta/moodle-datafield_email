@@ -22,7 +22,8 @@ Feature: Users can use the datatype field email and add an entry with that type.
       | data1    | text  | Test field name | Description field name |
       | data1    | email | Test field mail | Description field mail |
     When I am on the "Course 1" course page logged in as student1
-    And I add an entry to "Test database name" database with:
+    And I am on the "Test database name" "mod_data > add entry" page logged in as student1
+    And I set the following fields to these values:
       | Test field name | John Doe |
       | Test field mail | foo.bar  |
     And I press "Save"
@@ -31,7 +32,8 @@ Feature: Users can use the datatype field email and add an entry with that type.
     And I press "Save"
     Then I should see "John Doe"
     And I should see "foo@bar.com"
-    When I add an entry to "Test database name" database with:
+    When I am on the "Test database name" "mod_data > add entry" page logged in as student1
+    And I set the following fields to these values:
       | Test field name | Homer Simpson |
     And I press "Save"
     Then I should see "Homer Simpson"
