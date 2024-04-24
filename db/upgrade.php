@@ -23,9 +23,12 @@
  */
 
 /**
- * Database email field install code
+ * Database email field upgrade code
+ * @param int|float $oldversion
  */
-function xmldb_datafield_email_install() {
+function xmldb_datafield_email_upgrade($oldversion): bool {
+
     // Do this check on each upgrade, in case someone messed up the icons.
     \datafield_email\install::copyicon();
+    return true;
 }
