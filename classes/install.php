@@ -23,6 +23,9 @@
 
 namespace datafield_email;
 
+/**
+ * Copy icons during install and updates to the correct folder.
+ */
 class install {
 
     /**
