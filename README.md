@@ -1,9 +1,9 @@
 # Database Field Email
 
-![Release](https://img.shields.io/badge/Release-1.5-blue.svg)
+![Release](https://img.shields.io/badge/Release-1.6-blue.svg)
 [![Moodle Plugin CI](https://github.com/srobotta/moodle-datafield_email/actions/workflows/moodle-plugin-ci.yml/badge.svg)](https://github.com/srobotta/moodle-datafield_email/actions/workflows/moodle-plugin-ci.yml)
-[![PHP Support](https://img.shields.io/badge/php-7.4--8.4-blue)](https://github.com/srobotta/moodle-datafield_email/action)
-[![Moodle Support](https://img.shields.io/badge/Moodle-4.1--5.0-orange)](https://github.com/srobotta/moodle-datafield_email/actions)
+[![PHP Support](https://img.shields.io/badge/php-8.1--8.4-blue)](https://github.com/srobotta/moodle-datafield_email/action)
+[![Moodle Support](https://img.shields.io/badge/Moodle-4.1--5.1-orange)](https://github.com/srobotta/moodle-datafield_email/actions)
 [![License GPL-3.0](https://img.shields.io/github/license/srobotta/moodle-datafield_email?color=lightgrey)](https://github.com/srobotta/moodle-datafield_email/blob/main/LICENSE)
 
 This plugin provides an additional field type email for the database activity.
@@ -14,10 +14,11 @@ syntactically correct email addresses as values.
 
 Please run the following steps:
 1. Extract the zip archive into 
-`<moodle_install_dir>/mod/data/field/`. 
+`<moodle_install_dir>/mod/data/field/`. From Moodle 5.1 onwards it is
+`<moodle_install_dir>/public/mod/data/field/`.
 1. Rename the newly created directory `moodle-datafield_email` into `email`
 so that the files from the repository are inside the directory hierarchy
-`<moodle_install_dir>/mod/data/field/email`.
+`.../mod/data/field/email`.
 1. Finish the installation via the Moodle admin page.
 
 ## Usage
@@ -33,6 +34,11 @@ link in the view templates. If the checkbox is not checked, then
 the plain email value is printed without any modification.
 
 ## Version History
+
+### 1.6
+
+- Add support for Moodle 5.1
+- Remove unsupported PHP versions from the CI pipeline
 
 ### 1.5
 
