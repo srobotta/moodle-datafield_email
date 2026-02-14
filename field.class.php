@@ -81,7 +81,7 @@ class data_field_email extends data_field_base {
      */
     public function display_search_field($value = '') {
         return '<label class="accesshide" for="f_' . $this->field->id . '">' . get_string('fieldname', 'data') . '</label>' .
-               '<input type="text" size="16" id="f_' . $this->field->id . '" '.
+               '<input type="text" size="16" id="f_' . $this->field->id . '" ' .
                ' name="f_' . $this->field->id . '" value="' . s($value) . '" class="form-control d-inline"/>';
     }
 
@@ -92,7 +92,7 @@ class data_field_email extends data_field_base {
      * @throws coding_exception
      */
     public function parse_search_field($defaults = null) {
-        $param = 'f_'.$this->field->id;
+        $param = 'f_' . $this->field->id;
         if (empty($defaults[$param])) {
             $defaults = [$param => ''];
         }
@@ -169,7 +169,7 @@ class data_field_email extends data_field_base {
      * @return bool
      * @throws coding_exception
      */
-    public function update_content($recordid, $value, $name='') {
+    public function update_content($recordid, $value, $name = '') {
         return parent::update_content($recordid, clean_param($value, PARAM_EMAIL), $name);
     }
 
