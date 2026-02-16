@@ -28,7 +28,6 @@ namespace datafield_email;
  * Copy icons during install and updates to the correct folder.
  */
 class install {
-
     /**
      * Copy the email icon into the mod/data/pix folder.
      * @return void
