@@ -26,14 +26,14 @@ Feature: Users can use the datatype field email and add an entry with that type.
     And I set the following fields to these values:
       | Test field name | John Doe |
       | Test field mail | foo.bar  |
-    And I press "Save"
+    And I click on "//input[@value='Save']" "xpath"
     Then I should see "You must enter a valid email address here."
     And I set the field "Test field mail" to "foo@bar.com"
-    And I press "Save"
+    And I click on "//input[@value='Save']" "xpath"
     Then I should see "John Doe"
     And I should see "foo@bar.com"
     When I am on the "Test database name" "mod_data > add entry" page logged in as student1
     And I set the following fields to these values:
       | Test field name | Homer Simpson |
-    And I press "Save"
+    And I click on "//input[@value='Save']" "xpath"
     Then I should see "Homer Simpson"

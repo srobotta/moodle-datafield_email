@@ -28,7 +28,7 @@ Feature: Teachers can create a new datatype field email
       | Field name         | Test field mail        |
       | Field description  | Description field mail |
       | Create mailto link | 1                      |
-    And I press "Save"
+    And I click on "//input[@value='Save']" "xpath"
     Then I should see "Test field mail"
     And I should see "Description field mail"
     And I should see "Email"
@@ -37,6 +37,6 @@ Feature: Teachers can create a new datatype field email
     And I am on the "Test database name" "mod_data > add entry" page logged in as student1
     And I set the following fields to these values:
       | Test field mail | john.doe@example.org |
-    And I press "Save"
+    And I click on "//input[@value='Save']" "xpath"
     Then I should see "john.doe@example.org"
     And "//a[@href = 'mailto:john.doe@example.org']" "xpath_element" should exist
