@@ -35,9 +35,9 @@ class install {
     public static function copyicon() {
         $link = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', '..', 'pix', 'field', 'email.svg']);
         if (!file_exists($link)) {
-            $target = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', 'pix', 'email.svg']);
+            $target = realpath(implode(DIRECTORY_SEPARATOR, [__DIR__, '..', 'pix', 'icon.svg']));
             echo 'Create symlink for email icon... ';
-            if (!\symlink($target, $link)) {
+            if (!@symlink($target, $link)) {
                 echo 'failed' . PHP_EOL . 'Copy email icon... ';
                 if (!\copy($target, $link)) {
                     echo 'failed' . PHP_EOL . "Please copy {$target} to {$link}" . PHP_EOL;
