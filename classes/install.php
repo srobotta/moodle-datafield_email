@@ -37,7 +37,7 @@ class install {
         if (!file_exists($link)) {
             $target = realpath(implode(DIRECTORY_SEPARATOR, [__DIR__, '..', 'pix', 'icon.svg']));
             echo 'Create symlink for email icon... ';
-            if (!@symlink($target, $link)) {
+            if (!\symlink($target, $link)) {
                 echo 'failed' . PHP_EOL . 'Copy email icon... ';
                 if (!\copy($target, $link)) {
                     echo 'failed' . PHP_EOL . "Please copy {$target} to {$link}" . PHP_EOL;
